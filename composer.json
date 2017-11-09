@@ -1,0 +1,37 @@
+{
+    "name": "synnode/flash",
+    "description": "Flash Messages made easy. Based on laracasts/flash",
+    "license": "MIT",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "Synnode"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "~5.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "FlashMessage\\": "src/"
+        },
+        "files": [
+            "src/FlashMessage/functions.php"
+        ]
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FlashMessage\\FlashServiceProvider"
+            ],
+            "aliases": {
+                "Flash": "FlashMessage\\Flash"
+            }
+        }
+    }
+}
